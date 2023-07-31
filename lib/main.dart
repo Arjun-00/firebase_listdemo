@@ -5,6 +5,10 @@ import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
 
+import 'authentication/loginscreen.dart';
+import 'authentication/registerscreen.dart';
+import 'authentication/wellcomescreen.dart';
+
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
@@ -23,11 +27,16 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       routes: {
-        '/':(context) => const HomeScreen(),
+      //  '/':(context) => const HomeScreen(),
         '/add':(context) => const AddUser(),
         '/update':(context) => const UpdateUser(),
+       // '/welcome':(context) => WelcomeScreen(),
+        'welcome_screen': (context) => WelcomeScreen(),
+        'registration_screen': (context) => RegistrationScreen(),
+        'login_screen': (context) => LoginScreen(),
+        'home_screen': (context) => HomeScreen()
       },
-      initialRoute: '/',
+      initialRoute: 'welcome_screen',
     );
   }
 }

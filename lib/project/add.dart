@@ -64,7 +64,7 @@ class _AddUserState extends State<AddUser> {
                   items: bloodgroup.map((e) => DropdownMenuItem(
                     value: e,
                       child: Text(e))).toList(),
-                  onChanged: (val){selectedGroup = val;}
+                  onChanged: (val){selectedGroup = val as String?;}
               ),
             ),
 
