@@ -1,5 +1,7 @@
 # firebase_listdemo
 
+# FireBase used (Auth and FireStore crud operations )
+
 A new Flutter project.
 
 ## Getting Started
